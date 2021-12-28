@@ -1,0 +1,38 @@
+.audioPlayer{
+    position:fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    max-height:90px;
+    padding:0px 20px;
+    background: var(--dark-info-container)
+}
+.audioPlayerInfoImage{
+    margin:auto;
+    
+    width:48px;
+    height:48px;
+    
+    border-radius:50%;
+}
+.audioPlayerControls{
+    width:100%;
+    display:flex;
+}
+.audioPlayerLeft{
+    margin:auto auto auto 0;
+}
+.audioPlayerInfo{
+    gap:20px;
+    display:flex;
+}
+.audioPlayerInfoText{
+    display:flex;
+    flex-flow:column;
+    text-align:left;
+    color:white;
+    margin:auto;
+}
+.audioPlayerInfoText p{
+    margin-top:-10%;
+}

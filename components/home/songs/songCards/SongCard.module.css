@@ -1,0 +1,82 @@
+.songCard{
+    display:flex;
+    flex-flow:column;
+    max-width:260px;
+    max-height:520px;
+    color:white;
+    border-radius: var(--popup-border-radius);
+    padding:20px;
+    cursor: pointer;
+    background: rgb(17,16,16);
+    background:var(--dark-info-container);
+    transition:all 0.3s;
+    position:relative;
+}
+.songCard:hover{
+    background:var(--dark-info-container-hover);
+}
+.songCard:hover .playButton{
+    display:inline-block;
+}
+.songCardImage img{
+    width:260px;
+    height:175px;
+    border-radius: var(--popup-border-radius);
+    box-shadow: var(--image-box-shadow);
+}
+.songCardArtistImage{
+    width:24px;
+    border-radius:50%;
+    height:24px;
+}
+.songCardInfoText{
+    height:fit-content;
+    display: flex;
+    flex-flow:column;
+}
+.albumName{
+    padding-bottom: 10px;
+    margin-top:-3%;
+    
+}
+.songCardInfoText p{
+    color:var(--link-color)
+}
+
+.songCardArtistInfo{
+    display:grid;
+    gap:15px;
+}
+.songCardArtistInfo p{
+    margin:auto auto auto 0;
+    font-size:12px;
+}
+.songCardArtist{
+    display:flex;
+    gap:15px;
+}
+
+.playButton{
+    content: url('https://api.iconify.design/el/play-alt.svg?color=%238bb9e7');
+    width:48px;
+    height:48px;
+    position: absolute;
+    right:20px;
+    bottom:20px;
+    display:none;
+    animation: TheRiseOfThePlayButton 0.25s linear;
+}
+
+
+
+@keyframes TheRiseOfThePlayButton {
+    from {
+        transform: translate3d(0,20px,0);
+        opacity: 0;
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }

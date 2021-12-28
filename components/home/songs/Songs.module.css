@@ -1,0 +1,9 @@
+.songsCategory{
+    display:flex;
+    flex-flow:column;
+}
+.songsContainer{
+    gap:30px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(320px, 0fr) );
+}

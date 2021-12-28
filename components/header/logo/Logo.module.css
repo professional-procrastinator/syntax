@@ -1,0 +1,14 @@
+/*styles for the logo container*/
+
+.logoContainer{
+    display: flex;
+    gap:15px;
+    margin:auto auto auto 0;
+}
+
+.logoText{
+    font-weight: 600;
+    margin:auto;
+    color:var(--primary-logo-color);
+    font-size: 1.3em;
+}

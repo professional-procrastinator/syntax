@@ -1,0 +1,163 @@
+
+.popupParent{
+    position:absolute;
+    display: flex;
+    right:0;
+}
+
+.popupDiv{
+    
+    opacity:1;
+    width:320px;
+    height:507px;
+    background-color:var(--popup-background-color);
+    z-index:10;
+    border-radius:var(--popup-border-radius);
+    margin-left:auto; 
+    display:flex;
+    flex-flow:column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+.userProfileDiv{
+    
+    padding: 20px 36px 20px 0px;
+    text-align:center;
+    display: flex;
+    flex-flow:row;
+    align-items:center;
+    color:white;
+}
+
+.userProfileDiv img{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    margin:auto;
+}
+.userProfileDiv h3{
+    font-size:1.2em;
+    font-weight:500;
+    margin:auto auto auto 0;
+}
+
+.userProfileDiv p{
+    margin:auto;
+    color:var(--link-color);
+    font-size:14px;
+}
+
+.userProfileText{
+    display:flex;
+    flex-flow:column;
+    text-align: left;
+    gap:5px;
+}
+
+
+.popupLinkDiv{
+    display:flex;
+    gap:20px;
+    padding-top:24px;
+    padding-bottom:24px;
+    transition:all 0.1s;
+    padding-left: 30px;
+    padding-right:30px;
+}
+.popupLinkDiv:hover{
+    background-color: var(--popup-link-hover);
+    cursor: pointer;
+}
+.profileIcon{
+    content: url('https://api.iconify.design/bx/bxs-user.svg?color=%238d8d8d');
+    width:32px;
+    height:32px;
+}
+.profilePopupLinkDiv:hover .profileDivArrow{
+    display:flex;
+}
+.profileDivArrow{
+    margin-left:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    display:none;
+    content: url('https://api.iconify.design/ep/arrow-right.svg?color=%23f8f8f8&height=16');
+}
+.homeDivArrow{
+    margin-left:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    display:none;
+    content: url('https://api.iconify.design/ep/arrow-right.svg?color=%23f8f8f8&height=16');
+}
+.settingsPopupLinkDiv:hover .settingsDivArrow{
+    display:flex;
+}
+.homePopupLinkDiv:hover .homeDivArrow{
+    display:flex;
+}
+.settingsDivArrow{
+    margin-left:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    display:none;
+    content: url('https://api.iconify.design/ep/arrow-right.svg?color=%23f8f8f8&height=16');
+}
+.settingsIcon{
+    width:32px;
+    height:32px;
+    content: url('https://api.iconify.design/ci/settings-filled.svg?color=%238d8d8d');
+}
+.playlistsIcon{
+    width:32px;
+    height:32px;
+    content: url('https://api.iconify.design/bx/bxs-playlist.svg?color=%238d8d8d');
+}
+.languageIcon{
+    width:32px;
+    height:32px;
+    content: url('https://api.iconify.design/clarity/network-globe-solid.svg?color=%238d8d8d');
+}
+.logoutSeparator{
+    width:100%;
+    height:2px;
+    background-color:var(--popup-link-hover);
+}
+.logoutIcon{
+    width:32px;
+    height:32px;
+    margin-top:auto;
+    margin-bottom:auto;
+    padding-left:30px;
+    content: url('https://api.iconify.design/ci/exit.svg?color=%23FF3F3F&height=32');
+}
+.logoutDivMain{
+    display:flex;
+    width:100%;
+    padding-top:14.9px;
+    padding-bottom:14.5px;
+    margin-top: auto;
+    margin-bottom:auto;
+    gap:20px;
+    cursor: pointer;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.logoutDivMain:hover{
+    background-color: var(--popup-link-hover) !important;
+    
+}
+
+.homeIcon{
+    content: url('https://api.iconify.design/entypo/home.svg?color=%238d8d8d&height=32');
+}
+
+.linkText{
+    margin:auto auto auto 0;
+    color:var(--link-color);
+}
+.dangerText{
+    color:var(--danger-color);
+}

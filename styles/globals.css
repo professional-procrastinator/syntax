@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --primary-background:#111111;
+  --popup-background-color:rgb(26, 31, 36);
+  --popup-link-hover:#1c242c;
+  --dark-info-container:linear-gradient(180deg, #0c0c0c 0%, #161515 100%);
+  --dark-info-container-hover:linear-gradient(180deg, #0a0a0a 0%, #1f1e1e 100%);
+
+  --image-box-shadow:0 3px 8px rgba(44, 44, 44, 0.3);
+  --primary-logo-color:#8bb9e7;
+  --primary-color:#8bb9e7;
+  --primary-color-hover:#618ab3;
+  --danger-color:#ff3f3f;
+
+  --link-color:#8d8d8d;
+  --link-color-hover:#f8f8f8;
+
+  --popup-border-radius:6px;
+}
+
+body{
+  background-color: var(--primary-background);
+}
+
+*{
+  font-family:'Inter';
+}
+
+.loader{
+  
+	border: 2px solid var(--primary-color);
+	border-left-color: transparent;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	animation: loading 0.8s linear infinite;
+  margin:auto;
+  
+  display: inline-block;
+}
+
+@keyframes loading {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
+
