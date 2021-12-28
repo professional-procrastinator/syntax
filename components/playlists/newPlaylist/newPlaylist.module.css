@@ -1,0 +1,136 @@
+.newPlaylistPopupBackground{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    display:flex;
+}
+.newPlaylistPopup{
+    
+    width:530px;
+    height:396px;
+    background-color:var(--popup-background-color);
+    z-index:10;
+    border-radius:var(--popup-border-radius);
+    margin:auto; 
+    display:flex;
+    flex-flow:column;
+    animation:popup 0.1s forwards;
+}
+.newPlaylistPopupHeader{
+    display: flex;
+    padding:7px 22px;
+}
+.newPlaylistPopupHeading{
+    color:var(--primary-color)
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.newPlaylistPopupBody{
+    display:flex;
+    flex-flow:column;
+}
+
+
+.popupCloseIcon{
+    margin-left:auto;
+    transition:all 0.3s;
+    content: url('https://api.iconify.design/eva/close-fill.svg?height=24&color=%234B4B4B');
+}
+.popupCloseIcon:hover{
+    cursor:pointer;
+    transform:scale(1.07,1.07);
+    content: url('https://api.iconify.design/eva/close-fill.svg?height=24&color=%238bb9e7');
+}
+.newPlaylistPopupBody{
+    margin-top: -4%;
+    padding:0px 20px;
+}
+.newPlaylistPopupBodyInputContainer{
+    display:flex;
+    flex-flow:column;
+    gap:20px;
+}
+.newPlaylistPopupBodyInput{
+    height:30px;
+    border-radius:var(--popup-border-radius);
+    border:none;
+    background-color:var(--input-background-color);
+    color:white;
+    font-size:14px;
+    padding:10px 14px;
+    outline:none;
+}
+.newPlaylistPopupBodyTextarea{
+    height:100px;
+    border-radius:var(--popup-border-radius);
+    border:none;
+    background-color:var(--input-background-color);
+    color:white;
+    font-size:14px;
+    padding:15px 14px;
+    outline:none;
+    resize: none;
+}
+.newPlaylistPopupDesc{
+    color:var(--link-color);
+}
+.newPlaylistPopupCreateButton{
+    margin-left:auto;
+    width:fit-content;
+    padding:10px 32px;
+    background-color:var(--primary-color);
+    border:none;
+    border-radius: var(--popup-border-radius);
+    transition:all 0.2s;
+}
+.newPlaylistPopupCreateButton:hover{
+    cursor:pointer;
+    background-color:var(--primary-color-hover);
+}
+.mainInfoContainer{
+    display:flex;
+    gap:20px;
+}
+.mainInfoContainer input{
+    width:100%;
+    margin:auto;
+}
+.newPlaylistImageChooser{
+    border-radius:50%;
+    background-color:var(--input-background-color);
+    width:fit-content;
+    padding:14px;
+    display:flex;
+    cursor: pointer;
+}
+.chooseImageIcon{
+    content: url('https://api.iconify.design/bx/bxs-image.svg?color=%238d8d8d');
+    width:32px;
+    cursor: pointer;
+    height:32px;
+}
+.newPlaylistImageChooser:hover > .chooseImageIcon{
+    
+    content: url('https://api.iconify.design/bx/bxs-image.svg?color=%23ffffff');
+    width:32px;
+    height:32px;
+}
+.newPlaylistImage{
+    width:64px;
+    height:52px;
+    border-radius:50%;
+    background-color:var(--input-background-color);
+    object-fit:cover;
+}

@@ -1,9 +1,13 @@
 .songsCategory{
     display:flex;
     flex-flow:column;
+    padding-left:20px;
 }
 .songsContainer{
     gap:30px;
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(320px, 0fr) );
+}
+.categoryHeading{
+    color:white;
 }

@@ -4,8 +4,10 @@
     right:0;
     left:0;
     max-height:90px;
+    min-height:90px;
     padding:0px 20px;
-    background: var(--dark-info-container)
+    background: var(--dark-info-container);
+    display: flex;
 }
 .audioPlayerInfoImage{
     margin:auto;
@@ -16,8 +18,12 @@
     border-radius:50%;
 }
 .audioPlayerControls{
+    margin:auto;
     width:100%;
     display:flex;
+}
+.audioPlayerControlsTop{
+    gap:20px;
 }
 .audioPlayerLeft{
     margin:auto auto auto 0;
@@ -33,6 +39,94 @@
     color:white;
     margin:auto;
 }
+.audioPlayerInfoText h3{
+    font-size:18px;
+} 
 .audioPlayerInfoText p{
     margin-top:-10%;
+    color:var(--link-color);
+    font-size:14px;
+}
+.audioPlayerCenter{
+    margin:auto auto auto 0;
+}
+.audioPlayerControlsMain{
+    display:flex;
+    flex-flow:column;
+    margin:auto;
+}
+.audioPlayerControlsTop{
+    display:flex;
+    margin:auto;
+}
+.pauseButton{
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/carbon/pause-outline-filled.svg?color=%238bb9e7&height=28');
+}
+.pauseButton:hover{
+    transform:scale(1.09)
+}
+.playButton{
+    
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/ci/play-circle-filled.svg?color=%238bb9e7&height=28');
+}
+
+.playButton:hover{
+    transform:scale(1.09)
+}
+
+.mutedButton{
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/fluent/speaker-mute-20-filled.svg?color=%238bb9e7&height=28');
+}
+.mutedButton:hover{
+    transform:scale(1.09)
+}
+.volumeButton{
+    
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/bx/bxs-volume-full.svg?color=%238bb9e7&height=28');
+}
+
+.volumeButton:hover{
+    transform:scale(1.09)
+}
+.loopButtonOff{
+    
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/carbon/edt-loop.svg?color=%238bb9e7&height=28');
+}
+.loopButtonOff:hover{
+    
+    transform:scale(1.09);
+}
+
+.loopButtonOn{
+    
+    cursor: pointer;
+    transition:all 0.25s;
+    margin:auto;
+    content: url('https://api.iconify.design/carbon/edt-loop.svg?color=green&height=28');
+}
+.loopButtonOn:hover{
+    
+    transform:scale(1.09)
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .audioPlayerCenter{
+        margin:auto 0 auto 0;
+    }
 }

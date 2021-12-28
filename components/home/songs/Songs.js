@@ -27,12 +27,12 @@ export default function Songs({playSong}){
     return(
         <div>
             <div className={styles.songsCategory}>
-                <h2>Hot</h2>
+                <h2 className={styles.categoryHeading}>Trending</h2>
 
                 <div className={styles.songsContainer}>
                     {songs.length===0?(<div className="loader" />):
                         songs.map((song,index)=>{
-                            if(song.category==="Hot"){   
+                            if(song.category==="Trending"){   
                                 return(
                                     <SongCard playSong={playSong} song={song} index={index}/>
                                 )

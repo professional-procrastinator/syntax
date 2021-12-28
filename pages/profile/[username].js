@@ -5,23 +5,12 @@ import Header from '../../components/header/Header';
 import ProfileUI from '../../components/profile/Profile';
 import {useSession} from 'next-auth/client';
 const Profile = () => {
-    const [loading,setLoading] = useState(false);
+    const [loading,setLoading] = useState(true);
     const [resultProfile,setProfile] = useState(null);
     const [error,setError] = useState(null);
     const router = useRouter();
     const {username} = router.query;
 
-    useEffect(async () => {
-        setLoading(true);
-        const response = await fetch(`/api/me`,{
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-        });
-        const profile = await response.json();
-        
-    },[]);
     
     const FetchProfile = async () => { 
         

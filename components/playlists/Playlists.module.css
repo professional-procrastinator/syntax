@@ -1,0 +1,33 @@
+.PlayListsContainer{
+    padding:20px;
+}
+.PlayListsHeader{
+    display:flex;
+    width:100%;
+}
+.mainHeading{
+    color:var(--primary-color);
+}
+.newPlayListButton{
+    height:40px;
+    margin:auto 0 auto auto;
+    padding:10px 20px;
+    background-color: var(--primary-color);
+    cursor:pointer;
+    transition:all 0.2s;
+    border:none;
+    border-radius:var(--popup-border-radius);
+    outline:none;
+}
+.newPlayListButton:hover{
+    background-color:var(--primary-color-hover);
+}
+
+.PlayListsBody{
+    display:grid;
+    width:100%;
+    height:100%;
+    gap:20px;
+    
+    grid-template-columns: repeat( auto-fill, minmax(320px, 0fr) );
+}

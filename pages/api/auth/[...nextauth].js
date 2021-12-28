@@ -40,15 +40,16 @@ export default NextAuth({
             }
             const profileColor = color;
 
-            const newUser = new User({
+            const newUser = await new User({
                 name: req.name,
                 username:profile.given_name+'-'+id,
                 email:req.email,
                 image: req.image,
                 banner:profileColor,
                 bio:`Hi, I'm ${req.name}!`,
-            }) //save the new user in the users collection
-            newUser.save()
+                playlists:[]
+            }).save() //save the new user in the users collection
+            
         }
       }
   },

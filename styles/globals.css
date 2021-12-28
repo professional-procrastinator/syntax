@@ -2,11 +2,12 @@
 
 :root{
   --primary-background:#111111;
-  --popup-background-color:rgb(26, 31, 36);
-  --popup-link-hover:#1c242c;
+  --popup-background-color:rgb(24, 24, 24);
+  --popup-link-hover:#2a2a2a;
   --dark-info-container:linear-gradient(180deg, #0c0c0c 0%, #161515 100%);
   --dark-info-container-hover:linear-gradient(180deg, #0a0a0a 0%, #1f1e1e 100%);
-
+  --input-background-color:#0c0c0c;
+  
   --image-box-shadow:0 3px 8px rgba(44, 44, 44, 0.3);
   --primary-logo-color:#8bb9e7;
   --primary-color:#8bb9e7;
@@ -49,3 +50,11 @@ body{
 	}
 }
 
+.loaderContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}

@@ -30,6 +30,10 @@ const UserSchema = new Schema({
         type: String,
         required:true,
         maxlength:500
+    },
+    playlists:{
+        type:Array,
+        required:true
     }
 },{timestamps:true})
 

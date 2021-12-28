@@ -1,0 +1,19 @@
+.PlayListCard{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    width:fit-content;
+    min-width: 260px;
+    background: rgb(17,16,16);
+    background:var(--dark-info-container);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    cursor: pointer;
+    color:white;
+}
+.PlayListCardImage{
+    border-radius: var(--popup-border-radius);
+    width:100%;
+    max-height:160px;
+}
