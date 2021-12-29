@@ -40,7 +40,7 @@ export default function Songs({playSong}){
                         songs.map((song,index)=>{
                             if(song.category==="Trending"){   
                                 return(
-                                    <SongCard playSong={playSong} song={song} index={index} setAddtoPlaylistOpen={setAddtoPlaylistOpen} setAddtoPlaylistSong={setAddtoPlaylistSong}/>
+                                    <SongCard key={index} playSong={playSong} song={song} index={index} setAddtoPlaylistOpen={setAddtoPlaylistOpen} setAddtoPlaylistSong={setAddtoPlaylistSong}/>
                                 )
                             }
                         })
