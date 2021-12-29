@@ -24,6 +24,7 @@ export default function Links({setUserPopupOpen,userPopupOpen}){
                 <a href="/features" className={LinkStyles.link}>Features</a>
                 <a href="/pricing" className={LinkStyles.link}>Pricing</a>
                 <button onClick={(e)=>{signIn()}} className={LinkStyles.signupButton}>Sign up</button>
+                
             </div>
         )
     }

@@ -1,4 +1,5 @@
-
+import styles from './PlaylistSongs.module.css';
+import PlaylistSongCard from './playlistSongCard/PlayListSongCard';
 export default function PlaylistSongs({playlist,list}){
     return(
         <div className={styles.PlaylistSongsContainer}>
@@ -8,6 +9,7 @@ export default function PlaylistSongs({playlist,list}){
                 <div className={styles.PlaylistSongsHeaderInfo}>
                     <h1 className={styles.mainHeading}>{playlist.name}</h1>
                     <p className={styles.description}>{playlist.description}</p>
+                    <p className={styles.description}>{playlist.songs.length} songs</p>
                 </div>
             </div>
 

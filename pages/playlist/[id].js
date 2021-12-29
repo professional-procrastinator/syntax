@@ -1,6 +1,8 @@
 import {useRouter} from 'next/router';
 
+import AudioPlayer from '../../components/audioPlayer/AudioPlayer'; 
 import Header from '../../components/header/Header';
+import PlaylistSongs from '../../components/PlaylistSongs/PlaylistSongs';
 import {useState,useEffect} from 'react';
 export default function PlayList() {
     const [playlist, setPlaylist] = useState(null);
@@ -23,8 +25,14 @@ export default function PlayList() {
         if(data.error!=="None"){
             return console.error(data.details);
         }
+        console.log(data.details.songs[0])
+        
+        setChosenSong(data.details.songs[0])
         setPlaylist(data.details) 
         setLoading(false);
+
+        
+        console.log(chosenSong)
     }
     useEffect(async ()=>{
         if(!id){
@@ -40,9 +48,12 @@ export default function PlayList() {
         <div>
             <Header />
             {isLoading?<div className="loaderContainer"><div className="loader"/></div>:(
+                <>
                 <div className="playlistContainer">
-                    <h2>{playlist.name}</h2>
+                    <PlaylistSongs list={playlist.songs} chosenSong={chosenSong} setChosenSong={setChosenSong} playlist={playlist}/>
                 </div>
+                <AudioPlayer song={chosenSong}/>
+                </>
             )}
         </div>
     )

@@ -1,6 +1,7 @@
 import Header from '../header/Header' //import header
 import Songs from './songs/Songs' //import songs
 import AudioPlayer from '../audioPlayer/AudioPlayer'; 
+import AddToPlaylist from './songs/songCards/addToPlaylist';
 import {useState} from 'react';
 import styles from './Home.module.css' //import styles
 export default function Home(){
@@ -15,6 +16,7 @@ export default function Home(){
                 <Header/>
                 <h1 className={styles.mainHeading}>Home</h1>
                 <Songs playSong={playSong}/>
+                
             </div>
         )
     }else{

@@ -1,0 +1,45 @@
+.mainContainer{
+    padding-top:90px;
+    display:flex;
+    flex-flow:column;
+    gap:20px;
+}
+.textContainer{
+    color:white;
+    margin:auto;
+    text-align:center;
+}
+.textContainer h2{
+    color:var(--primary-color)
+}
+.signupButton{
+    padding:13px 36px;
+    background-color: var(--primary-color);
+    border:none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition:all 0.3s;
+    cursor: pointer;
+}
+.signupButton:hover{
+    transform: scale(1.015);
+    background-color: var(--primary-color-hover);
+}
+.buttonContainer{
+    margin:auto;
+    display:flex;
+    gap:20px;
+}
+.githubIcon{
+    margin:auto;
+    width:fit-content;
+    content: url('https://api.iconify.design/akar-icons/github-fill.svg?color=%23ACACAC&height=32');
+    transition:all 0.2s;
+    cursor:pointer;
+}
+.githubIcon:hover{
+    transform:scale(1.07);
+    content: url('https://api.iconify.design/akar-icons/github-fill.svg?color=%23ffffff&height=32');
+}
+

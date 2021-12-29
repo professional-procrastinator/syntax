@@ -3,7 +3,7 @@ import {useRef,useEffect,useState} from 'react';
 export default function NewPlaylistPopup({setOpen,newPlaylist}){
     const [playlistName,setPlaylistName] = useState("");
     const [playlistDescription,setPlaylistDescription] = useState("");
-    const [playListSrc,setPlayListSrc] = useState("https://o.remove.bg/downloads/8c572a70-58ec-42a3-b1c7-24436a24f155/image-removebg-preview.png");
+    const [playListSrc,setPlayListSrc] = useState("");
 
     let ref = useRef(null);
     const handleClickOutside = (event) => {
@@ -49,7 +49,7 @@ export default function NewPlaylistPopup({setOpen,newPlaylist}){
                             
                             
                                 {
-                                playListSrc=="https://o.remove.bg/downloads/8c572a70-58ec-42a3-b1c7-24436a24f155/image-removebg-preview.png"?(
+                                playListSrc==""?(
                                 <div className={styles.newPlaylistImageChooser}>
                                     <input type="file" placeholder="Image" id="imageInput" style={{display:'none'}} onChange={(evt)=>{handleUpload(evt.target.files[0])}} />
                                     <label htmlFor="imageInput" className={styles.chooseImageIcon}/>

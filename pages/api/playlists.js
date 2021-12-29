@@ -1,6 +1,6 @@
 import connectToDB from "../../global/connect"
 import User from "../../models/user"
-import Playlist from "../../models/playlist"
+import Playlist from "../../models/Playlist"
 import mongodb from 'mongodb';
 import {getSession} from 'next-auth/client';
 

@@ -12,6 +12,9 @@
     cursor: pointer;
     color:white;
 }
+.PlayListCard:hover{
+    background:var(--dark-info-container-hover);
+}
 .PlayListCardImage{
     border-radius: var(--popup-border-radius);
     width:100%;

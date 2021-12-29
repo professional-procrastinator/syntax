@@ -80,3 +80,13 @@
         opacity: 1
     }
   }
+.detailsIcon{
+    content: url('https://api.iconify.design/bi/three-dots-vertical.svg?color=%238bb9e7&height=20');
+
+}
+.songCardInfoTextHeader{
+    display:flex;
+    flex-flow:row;
+    justify-content:space-between;
+    align-items:center;
+}

@@ -47,3 +47,9 @@
     -moz-box-shadow: 3px 3px 20px 1px rgba(77,77,77,0.75);
     box-shadow: 3px 3px 20px 1px rgba(77,77,77,0.75);
 }
+@media only screen and (max-width: 500px) {
+    
+    .link{
+        display:none;
+    }  
+}

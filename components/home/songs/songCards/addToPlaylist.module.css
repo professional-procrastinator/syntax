@@ -1,0 +1,51 @@
+.AddToPlaylistBackground{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999999;
+    display:flex;
+}
+.AddToPlaylistContainer{
+    padding-bottom:20px;
+    width:70%;
+    height:fit-content;
+    background-color:var(--popup-background-color);
+    z-index:10;
+    border-radius:var(--popup-border-radius);
+    margin:auto; 
+    display:flex;
+    flex-flow:column;
+    animation:popup 0.1s forwards;
+}
+.AddToPlaylistHeader{
+    display: flex;
+    flex-flow: column;
+    padding:7px 22px;
+    color:var(--primary-color);
+}
+.AddToPlaylistBodyList{
+    display:grid;
+    grid-template-columns: repeat( auto-fill, minmax(320px, 0fr) );
+}
+.AddToPlaylistButton{
+    margin-left:auto;
+    width:fit-content;
+    padding:10px 32px;
+    background-color:var(--primary-color);
+    border:none;
+    border-radius: var(--popup-border-radius);
+    transition:all 0.2s;
+}
+.AddToPlaylistButton:hover{
+    cursor:pointer;
+    background-color:var(--primary-color-hover);
+}
+.AddToPlaylistBody{
+    padding:0 22px;
+    display:flex;
+    flex-flow:column;
+}

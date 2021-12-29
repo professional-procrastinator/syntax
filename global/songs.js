@@ -1,4 +1,4 @@
-export default songs = [
+const songs = [
     {
         "id": "ebeufry73yegd",
         "name": "Shape of You",
@@ -27,6 +27,9 @@ export default songs = [
             }
         ],
         "image": "https://upload.wikimedia.org/wikipedia/en/c/c8/Luis_Fonsi_Feat._Daddy_Yankee_-_Despacito_%28Official_Single_Cover%29.png",
-        "category": "Trending"
+        "category": "Trending",
+        "url":"https://docs.google.com/uc?export=download&id=1YiUiLVmCEx5g3JWsKL8Rk7-6ZS58bGmX"
     }
 ]
+
+export default songs;

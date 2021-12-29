@@ -1,0 +1,25 @@
+.PlaylistSongsContainer{
+    padding:20px;
+    display:flex;
+    flex-flow:column;
+    gap:30px;
+}
+.PlaylistSongsHeader{
+    display:flex;
+    gap:20px;
+}
+.PlaylistSongsHeader img{
+    border-radius:var(--popup-border-radius);
+}
+.mainHeading{
+    color: white;
+}
+.PlaylistSongsHeaderInfo{
+    display:flex;
+    flex-flow:column;
+
+}
+.description{
+    color:var(--link-color);
+    font-size:13px;
+}

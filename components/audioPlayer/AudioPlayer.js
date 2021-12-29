@@ -13,27 +13,40 @@ export default function AudioPlayer({song}){
     const [loop,setLoop] = useState(false);
 
     useEffect(()=>{
-        setAudioObj(new Audio(songInfo.url));
+        console.log(songInfo)
+        setAudioObj(new Audio(song.url));
 
         return(()=>{
             setAudioObj(null);
+            setPlaying(false);
             setDuration(0);
             setCurrentTime(0);
-            setSongInfo(null);
         })
-    },[])
+    },[song])
 
     useEffect(()=>{
         if(audioObj){
             audioObj.preload="metadata";
-            audioObj.play();
             setLoading(false)
-            setPlaying(true);
+            setPlaying(false);
 
             audioObj.onloadedmetadata = () => {
 
                 setDuration(durationToTime(audioObj.duration));
             }
+            const timeline = window.document.querySelector(".timeline");
+            timeline.addEventListener("click", e => {
+            const timelineWidth = window.getComputedStyle(timeline).width;
+            const timeToSeek = e.offsetX / parseInt(timelineWidth) * audioObj.duration;
+            audioObj.currentTime = timeToSeek;
+            }, false);
+
+
+            setInterval(() => {
+                const progressBar = window.document.querySelector(".progress");
+                progressBar.style.width = audioObj.currentTime / audioObj.duration * 100 + "%";
+                setCurrentTime(durationToTime(audioObj.currentTime))
+              }, 500);
         }
         return
     },[audioObj])
@@ -83,8 +96,16 @@ export default function AudioPlayer({song}){
                             </div>
 
                             <div className={styles.audioPlayerControlsBottom}>
-                                {currentTime}
-                                {duration}
+                                
+                                <div className="timeline">
+                                    <div className="progress" />
+                                    
+                                </div>
+
+                                <div className={styles.audioTime}>
+                                    <p className={styles.audioPlayerCurrent}>{currentTime}</p>
+                                    <p className={styles.audioPlayerDuration}>{duration}</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,9 @@
 import styles from './PlayListCard.module.css'
 export default function PlayListCard({playlist,index}){
     return(
-        <div className={styles.PlayListCard} onClick={()=>{window.location.href=`/playlist/${playlist._id}`}}>
+        <div className={styles.PlayListCard} onClick={()=>{window.location.href=`/playlist/${playlist._id}`}} key={index}>
             <div className={styles.PlayListCardImage}>
-                <img className={styles.PlayListCardImage} src={playlist.image} />
+                {playlist.image?(<img className={styles.PlayListCardImage} src={playlist.image} />):null}
             </div>
 
             <div className={styles.PlayListCardHeader}>
