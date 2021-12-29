@@ -25,14 +25,12 @@ export default function PlayList() {
         if(data.error!=="None"){
             return console.error(data.details);
         }
-        console.log(data.details.songs[0])
         
         setChosenSong(data.details.songs[0])
         setPlaylist(data.details) 
         setLoading(false);
 
         
-        console.log(chosenSong)
     }
     useEffect(async ()=>{
         if(!id){

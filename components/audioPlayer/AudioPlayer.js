@@ -13,7 +13,6 @@ export default function AudioPlayer({song}){
     const [loop,setLoop] = useState(false);
 
     useEffect(()=>{
-        console.log(songInfo)
         setAudioObj(new Audio(song.url));
 
         return(()=>{

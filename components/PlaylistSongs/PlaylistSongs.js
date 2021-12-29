@@ -17,7 +17,7 @@ export default function PlaylistSongs({playlist,list}){
                 {
                     list.map((song,index)=>{
                         return(
-                            <PlaylistSongCard song={song} playlist={playlist} index={index} />
+                            <PlaylistSongCard key={index} song={song} playlist={playlist} index={index} />
                         )
                     })
                 }
