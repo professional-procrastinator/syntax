@@ -1,5 +1,5 @@
 import styles from './PlaylistSongs.module.css';
-import PlaylistSongCard from './playlistSongCard/PlayListSongCard';
+import PlaylistSongCard from './PlaylistSongCard/PlayListSongCard';
 export default function PlaylistSongs({playlist,list}){
     return(
         <div className={styles.PlaylistSongsContainer}>
