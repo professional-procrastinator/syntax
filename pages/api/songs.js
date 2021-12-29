@@ -1,4 +1,4 @@
-import songs from "../../global/songs";
+import songs from "../../global/songs.js";
 export default async function handler(req, res) {
 
     if(req.method==='GET'){        

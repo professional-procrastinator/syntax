@@ -3,7 +3,7 @@ import connectToDB from "../../../global/connect.js" //connect to the mongodb da
 
 connectToDB();
 //import models
-import Playlist from "../../../models/Playlist"
+import Playlist from "../../../models/Playlist.js"
 
 export default async function handler(req, res) {
     const {id} = req.query;

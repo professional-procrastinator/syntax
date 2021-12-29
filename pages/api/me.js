@@ -1,5 +1,5 @@
 import connectToDB from "../../global/connect";
-import User from "../../models/user";
+import User from "../../models/user.js";
 import {getSession} from 'next-auth/client';
 
 

@@ -1,9 +1,9 @@
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
-import connectToDB from "../../../global/connect" //connect to the mongodb database
+import connectToDB from "../../../global/connect.js" //connect to the mongodb database
 
 //import models
-import User from "../../../models/user"
+import User from "../../../models/user.js"
 
 
 connectToDB()

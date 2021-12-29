@@ -1,7 +1,7 @@
 import connectToDB from "../../global/connect"
-import User from "../../models/user"
-import Playlist from "../../models/Playlist"
-import mongodb from 'mongodb';
+import User from "../../models/user.js"
+import Playlist from "../../models/Playlist.js"
+const mongodb = require('mongodb')
 import {getSession} from 'next-auth/client';
 
 export default async function handler(req, res) {
