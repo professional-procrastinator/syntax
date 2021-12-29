@@ -34,7 +34,7 @@ export default function addToPlaylist({setOpen,addToPlaylistSong}){
         }
     },[]);
 
-    const addToPlaylist = () => {
+    const AddToPlayList = () => {
         if(chosenPlaylist){
             const response = fetch(`/api/playlist/${chosenPlaylist}`,{
                 method: 'PUT',
@@ -85,7 +85,7 @@ export default function addToPlaylist({setOpen,addToPlaylistSong}){
                             })
                         }
                     </div>
-                    <button className={styles.AddToPlaylistButton} onClick={()=>{addToPlaylist()}}>Add to playlist</button>
+                    <button className={styles.AddToPlaylistButton} onClick={()=>{AddToPlayList()}}>Add to playlist</button>
                 </div>
             </div>
         </div>
