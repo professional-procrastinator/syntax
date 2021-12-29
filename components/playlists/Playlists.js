@@ -13,7 +13,7 @@ export default function PlayLists({list,setNewPlayListPopupOpen}){
                 {
                     list.map((playlist,index)=>{
                         return(
-                            <PlayListCard playlist={playlist} index={index} />
+                            <PlayListCard playlist={playlist} key={index} />
                         )
                     })
                 }

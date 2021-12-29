@@ -2,7 +2,7 @@ import PlayListCard from "../../../playlists/playlistCard/PlayListCard";
 import playlistCardStyles from "../../../playlists/playlistCard/PlayListCard.module.css"; 
 import styles from './addToPlaylist.module.css';
 import {useState,useEffect,useRef} from "react";
-export default function addToPlaylist({setOpen,addToPlaylistSong}){
+export default function AddToPlaylist({setOpen,addToPlaylistSong}){
     const [chosenPlaylist,setChosenPlaylist] = useState(null);
     const [playlists,setPlaylists] = useState([]);
     const [loading,setLoading] = useState(true);
@@ -70,7 +70,7 @@ export default function addToPlaylist({setOpen,addToPlaylistSong}){
                         {
                             playlists.map((playlist,index)=>{
                                 return(
-                                    <div className={playlistCardStyles.PlayListCard} style={{"background":chosenPlaylist==playlist._id?"var(--dark-info-container-hover)":"var(--dark-info-container)"}}onClick={()=>{setChosenPlaylist(playlist._id)}}>
+                                    <div className={playlistCardStyles.PlayListCard} style={{"background":chosenPlaylist==playlist._id?"var(--dark-info-container-hover)":"var(--dark-info-container)"}}onClick={()=>{setChosenPlaylist(playlist._id)}} key={index}>
                                         <div className={playlistCardStyles.PlayListCardImage}>
                                             
                                             {playlist.image?(<img className={playlistCardStyles.PlayListCardImage} src={playlist.image} />):null}
