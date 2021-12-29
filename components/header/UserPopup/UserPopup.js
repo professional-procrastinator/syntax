@@ -37,7 +37,7 @@ export default function UserPopup({user,setUserPopupOpen}){
                     <div className={styles.homeDivArrow}></div>
                 </div>
 
-                <div className={`${styles.popupLinkDiv} ${styles.profilePopupLinkDiv}`} onClick={()=>{window.location.href=`/profile/${profileUsername}`}}>
+                <div className={`${styles.popupLinkDiv} ${styles.profilePopupLinkDiv}`} onClick={()=>{window.location.href=`/profile/${user.username}`}}>
                     <div className={styles.profileIcon}></div>
                     <p className={styles.linkText}>Profile</p>
                     <div className={styles.profileDivArrow}></div>

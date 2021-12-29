@@ -20,6 +20,7 @@
     background-color:rgb(22, 22, 22);
     border-bottom-left-radius: var(--popup-border-radius);
     border-bottom-right-radius: var(--popup-border-radius);
+    padding-bottom:20px;
 }
 .profileImage{
     border:3px solid var(--dark-info-container);
